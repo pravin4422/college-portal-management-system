@@ -65,11 +65,11 @@ public class Main {
 
     private static void Read(ArrayList ids, ArrayList names, ArrayList aga, ArrayList mark) {
         if (ids.isEmpty()) {
-            System.out.println("No data found! Please create a record first.");
+            System.out.println("No data found Please create a record first.");
             return;
         }
 
-        System.out.println("\n--- Existing Records ---");
+        System.out.println("\nExisting Records");
         for (int i = 0; i < ids.size(); i++) {
             System.out.println("Student record [" + i + "] -> ID: " + ids.get(i) +
                     ", Name: " + names.get(i) +
@@ -99,17 +99,17 @@ public class Main {
             case 1:
                 System.out.print("Enter new Name: ");
                 names.set(index, sc.nextLine());
-                System.out.println("Name updated successfully!");
+                System.out.println("Name updated successfully");
                 break;
             case 2:
                 System.out.print("Enter new Age: ");
                 ages.set(index, sc.nextInt());
-                System.out.println("Age updated successfully!");
+                System.out.println("Age updated successfully");
                 break;
             case 3:
                 System.out.print("Enter new Mark: ");
                 marks.set(index, sc.nextDouble());
-                System.out.println("Mark updated successfully!");
+                System.out.println("Mark updated successfully");
                 break;
             case 4:
                 System.out.print("Enter new Name: ");
@@ -118,7 +118,7 @@ public class Main {
                 ages.set(index, sc.nextInt());
                 System.out.print("Enter new Mark: ");
                 marks.set(index, sc.nextDouble());
-                System.out.println("All fields updated successfully!");
+                System.out.println("All fields updated successfully");
                 break;
             default:
                 System.out.println("Invalid choice. Returning to main menu.");
@@ -130,7 +130,7 @@ public class Main {
         ages.remove(index);
         marks.remove(index);
 
-        System.out.println("Record deleted successfully!");
+        System.out.println("Record deleted successfully");
     }
 
 }
