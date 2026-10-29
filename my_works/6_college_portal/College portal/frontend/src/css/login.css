@@ -1,0 +1,317 @@
+/* Universal Configuration Defaults and Canvas Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+/* Styling for fields locked during OTP verification phase */
+.input-group input:disabled {
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  border-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Specific styling variations for the OTP verification screen state */
+.box h2 {
+  transition: color 0.2s ease-in-out;
+}
+
+/* Tracking configuration for the 6-digit OTP field layout text */
+input[name="user_login_otp_validation_field"] {
+  letter-spacing: 4px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Smooth scaling and fade animation when the layout toggles input fields */
+.input-group {
+  animation: fadeInField 0.3s ease-in-out;
+}
+
+@keyframes fadeInField {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Password field wrapper with eye toggle */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 44px;
+}
+
+.eye-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.eye-btn:hover {
+  color: #4a5568;
+}
+
+/* Resend OTP button */
+.resend-otp-btn {
+  align-self: flex-end;
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: #4a5568;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.resend-otp-btn:hover:not(:disabled) {
+  color: #1a202c;
+  text-decoration: underline;
+}
+
+.resend-otp-btn:disabled {
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Screen Centered Structural Grid Wrapper */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 56px);
+  width: 100%;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Form Layout Shell Form Frame */
+.login-form {
+  width: 100%;
+  padding: 5px 0;
+}
+
+/* Elevated Base Card Container Wrapper Box */
+.box {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(160, 175, 192, 0.25);
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease;
+}
+
+/* Hover Dynamic Lift Effect */
+.box:hover {
+  transform: translateY(-4px);
+}
+
+/* Form Heading Element Definition */
+.box h2 {
+  color: #1a202c;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+/* Form Layout Box Segment Blocks */
+.input-group {
+  margin-bottom: 20px; /* Gives standard inputs a clean structural gap spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Text Element Metadata Labels */
+.input-group label {
+  color: #4a5568;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Input Fields Functional Framework Layer */
+.input-group input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  color: #2d3748;
+  background-color: #f7fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Highlighted Border Changes on Input Activation */
+.input-group input:focus {
+  border-color: #4a5568;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(74, 85, 104, 0.15);
+}
+
+.input-group input::placeholder {
+  color: #a0aec0;
+  font-size: 14px;
+}
+
+/* Action Execution Button Interface Engine */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #2d3748;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(45, 55, 72, 0.2);
+}
+
+.login-btn:hover {
+  background-color: #1a202c;
+  box-shadow: 0 6px 16px rgba(45, 55, 72, 0.3);
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+/* Bottom Routing Context Label Navigation Links */
+.switch-text {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #718096;
+}
+
+.switch-text a {
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.switch-text a:hover {
+  color: #1a202c;
+  text-decoration: underline;
+}
+
+/* Styling for the email informational text alert block */
+.otp-instructions {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.otp-instructions strong {
+  color: #222222;
+  word-break: break-all;
+}
+
+/* Enhances the font size of the input line specifically for code readability */
+.otp-form input[type="text"] {
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+/* Secondary fallback cancel button styled to loop back smoothly to step 1 form view */
+.back-btn {
+  background: transparent;
+  border: 1px solid #cccccc;
+  color: #666666;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.back-btn:hover {
+  background-color: #f5f5f5;
+  color: #333333;
+  border-color: #999999;
+}
+/* Styling for when the email field locks during OTP mode */
+.login-form input:disabled {
+    background-color: #f1f3f5;
+    color: #6c757d;
+    cursor: not-allowed;
+    border-color: #dee2e6;
+    opacity: 0.8;
+}
+
+/* Enhances the look of the new 6-digit verification code input box */
+.login-form input[name="user_login_otp_validation_field"] {
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Subtle animation to make the inputs fade in smoothly when switching modes */
+.input-group {
+    animation: fadeInComponent 0.3s ease-in-out;
+}
+
+@keyframes fadeInComponent {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* OTP sent confirmation message */
+.otp-sent-msg {
+  font-size: 13px;
+  color: #2d6a4f;
+  background: #d8f3dc;
+  border: 1px solid #b7e4c7;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  width: 100%;
+  box-sizing: border-box;
+}
